@@ -176,7 +176,7 @@ def predict_price(year,town,flat_type,flr_area_sqm,flat_model,stry_start,stry_en
     lese_coms_dt = int(les_coms_dt)
 
 
-    with open('C:/Users/lenovo/Desktop/try/singapore_flat_resale_analysis/Resale_prediction_Model_1.pkl', 'rb') as f:
+    with open('Resale_prediction_Model_1.pkl', 'rb') as f:
         regg_model = pickle.load(f)
 
 
