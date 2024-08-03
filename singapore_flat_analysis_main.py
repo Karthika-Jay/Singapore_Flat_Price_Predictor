@@ -16,6 +16,9 @@ from datetime import date
 import sklearn
 from streamlit_option_menu import option_menu
 import base64
+from sklearn.ensemble import RandomForestRegressor
+from joblib import dump
+
 
 def town_mapping(town_map):
     if town_map == 'ANG MO KIO':
@@ -173,8 +176,9 @@ def predict_price(year,town,flat_type,flr_area_sqm,flat_model,stry_start,stry_en
     lese_coms_dt = int(les_coms_dt)
 
 
-    with open(r"Resale_prediction_Model_1.pkl","rb") as f:
-        regg_model= pickle.load(f)
+    with open('C:/Users/lenovo/Desktop/try/singapore_flat_resale_analysis/Resale_prediction_Model_1.pkl', 'rb') as f:
+        regg_model = pickle.load(f)
+
 
     user_data = np.array([[year_1,town_2,flt_ty_2,flr_ar_sqm_1,
                            flt_model_2,str_str,str_end,rem_les_year,rem_les_month,
